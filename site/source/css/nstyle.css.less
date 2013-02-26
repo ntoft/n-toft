@@ -1,10 +1,19 @@
-@color: pink;
+@pri-color: #0088cc;
 
-.messedup {
-  color: blue;
-  text-decoration: underline;
+body {
+  background: lighten(@pri-color,20%);
 }
-
-h1 {
-  .messedup;
+.card-container {
+  width: 500px;
+  height: 500px;
+  margin: 20px auto;
+  padding: 14px;
+  div.card {
+    background: #fff;
+    height: 500px;
+    width: 500px;
+  }
+  p {
+    // color: #fff;
+  }
 }
