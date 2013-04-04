@@ -42,14 +42,30 @@ p {
   background-size: 100%;
   .opacity;
   transition:opacity 0.2s linear;
+  &:after {
+    display: block;
+    font-weight: bold;
+    content: url('../img/dropmealine.png');
+    margin: 60px 0 0 50px;
+    position: absolute;
+    // top: 150px;
+    .opacity(0);
+    -webkit-animation: pulse 2s ease-out;
+    -moz-animation: pulse 2s ease-out;
+    animation: pulse 2s ease-out;
+    -webkit-animation-iteration-count: 3;
+    -moz-animation-iteration-count: 3;
+    animation-iteration-count: 3;
+  }
   &:hover {
     cursor: pointer;
     .opacity(1);
     &:after {
+      .opacity(1);
       display: block;
       font-weight: bold;
-      content: "contact me";
-      margin: 90px 0 0 0;
+      content: url('../img/dropmealine.png');
+      margin: 60px 0 0 50px;
       position: absolute;
       // top: 150px;
     }
@@ -80,6 +96,25 @@ h2 {
   margin: 3% auto;
 }
 
+.content {
+  margin: 60px auto;
+  width: 90%;
+  max-width: 400px;
+  background: #222;
+  padding: 22px;
+}
+
+.done {
+  position: absolute;
+  margin: 4px 0 0 315px;
+  .border-radius;
+  background: #000;
+  padding: 6px 12px;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
 @media (min-width: 400px) and (max-width: 800px) {
   .nt {
     width: 100px;
@@ -104,6 +139,9 @@ h2 {
     width: 90%;
     margin: 2% auto;
   }
+  a.done {
+    margin: 4px 0 0 238px;
+  }
 }
 
 a {
@@ -122,11 +160,26 @@ a {
 }
 
 
-.content {
-  margin: 60px auto;
-  width: 600px;
-  // height: 300px;
-  // overflow: hidden;
-  background: #222;
-  padding: 24px;
+
+@-moz-keyframes pulse {
+ 0% {
+  opacity: 0.0;
+ }
+ 25% {
+  opacity: 0.3;
+ }
+ 100% {
+  opacity: 0.0;
+ }
+}
+@-webkit-keyframes "pulse" {
+ 0% {
+  opacity: 0.0;
+ }
+ 25% {
+  opacity: 1;
+ }
+ 100% {
+  opacity: 0.0;
+ }
 }
